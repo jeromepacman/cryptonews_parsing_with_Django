@@ -10,3 +10,4 @@ Supprimerait db.sqlite3
 Supprimerait env/
 Supprimerait manage.py
 Supprimerait mysite/
+Supprimerait venv/include/
