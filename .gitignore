@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+Supprimerait .idea/.gitignore
+Supprimerait .idea/CryptoNews-master.iml
+Supprimerait .idea/inspectionProfiles/
+Supprimerait .idea/misc.xml
+Supprimerait .idea/modules.xml
+Supprimerait .idea/vcs.xml
+Supprimerait crypto/
+Supprimerait db.sqlite3
+Supprimerait env/
+Supprimerait manage.py
+Supprimerait mysite/
