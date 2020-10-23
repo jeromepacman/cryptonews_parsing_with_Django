@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CryptoNews-master.iml" filepath="$PROJECT_DIR$/.idea/CryptoNews-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Cryptonews_parse.iml" filepath="$PROJECT_DIR$/.idea/Cryptonews_parse.iml" />
     </modules>
   </component>
 </project>
