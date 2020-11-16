@@ -1,2 +1,4 @@
-django
-requests
+django~=3.1.2
+gunicorn
+psycopg2
+requests~=2.24.0
