@@ -1,4 +1,3 @@
-import dj_database_url
 
 from mysite.settings import *
 
@@ -12,4 +11,4 @@ ALLOWED_HOSTS = ['cryptonews.herokuapp.com']
 
 SECURE_SSL_REDIRECT = True
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=500)
+
