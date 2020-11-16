@@ -143,3 +143,4 @@ tags
 .idea/
 
 .pytest_cache/
+!/db.sqlite3

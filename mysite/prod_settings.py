@@ -7,8 +7,8 @@ TEMPLATE_DEBUG = False
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['cryptonews.herokuapp.com']
+ALLOWED_HOSTS = ['cryptonews.herokuapp.com', 'www.cryptonews.herokuapp.com']
 
-SECURE_SSL_REDIRECT = True
+
 
 
