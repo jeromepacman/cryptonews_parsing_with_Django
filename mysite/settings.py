@@ -1,11 +1,23 @@
 import os
 
+from django.core.exceptions import ImproperlyConfigured
+
+
+def get_env_variable(var_name, default_value):
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        if default_value is None:
+            error_msg = "Set the {} environment variable".format(var_name)
+            raise ImproperlyConfigured(error_msg)
+        else:
+            return default_value
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%l=_j0sp3#gau=%yr==fn)9wrybcck!*r+!y7we#be=#l^6c=)'
-
-# SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = get_env_variable('SECRET_KEY', '(24)ipbaa7p1r59aw-#-^15$v*_t11cry#my*w=og7ncl9te64')
 
 DEBUG = True
 
