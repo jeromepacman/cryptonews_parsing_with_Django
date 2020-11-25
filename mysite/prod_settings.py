@@ -8,5 +8,4 @@ ALLOWED_HOSTS = ['cryptonews.herokuapp.com']
 
 SECURE_SSL_REDIRECT = True
 
-SECRET_KEY = os.environ['SECRET_KEY']
 
