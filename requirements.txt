@@ -10,4 +10,4 @@ pytz
 requests
 sqlparse
 urllib3
-
+secret-key-generator
