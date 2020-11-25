@@ -11,8 +11,8 @@
     {% for key,value in crypto.DISPLAY.items %}
 
     <div class="card text-center mb-5">
-        <div class="card-header"><h1>{{ key }}</h1></div>
-        <div class="card-body">
+        <div class="card-header bg-warning"><h1>{{ key }}</h1></div>
+        <div class="card-body lead">
             <strong>Price</strong> {{ value.USD.PRICE }}<br>
             <strong>Day High</strong> {{ value.USD.HIGHDAY }}<br>
             <strong>Day Low</strong> {{ value.USD.LOWDAY }}<br>
