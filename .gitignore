@@ -144,3 +144,6 @@ tags
 
 .pytest_cache/
 !/db.sqlite3
+
+.idea
+.secret.txt
