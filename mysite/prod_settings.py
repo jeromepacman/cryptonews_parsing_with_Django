@@ -1,12 +1,14 @@
 from mysite.settings import *
 
+SECRET_KEY = os.environ['SECRET_KEY']
+
 DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['cryptonews.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 SECURE_SSL_REDIRECT = True
 
-SECRET_KEY = os.environ['SECRET_KEY']
+
 

@@ -1,27 +1,57 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% if notfound %}
-<h3>{{ notfound }}</h3>
-{% else %}
-{% if crypto.Response %}
-<h3>Sorry, {{ quote }} doesn't exist. Please try again...</h3>
-{% endif %}
-<div class="container">
-    {% for key,value in crypto.DISPLAY.items %}
+    {% if notfound %}
+        <h3>{{ notfound }}</h3>
+    {% else %}
+        {% if crypto.Response %}
+            <h3>Sorry, {{ quote }} doesn't exist. Please try again...</h3>
+        {% endif %}
+        <div class="container">
+            {% for key,value in crypto.DISPLAY.items %}
 
-    <div class="card text-center mb-5">
-        <div class="card-header bg-warning"><h1>{{ key }}</h1></div>
-        <div class="card-body lead">
-            <strong>Price</strong> {{ value.USD.PRICE }}<br>
-            <strong>Day High</strong> {{ value.USD.HIGHDAY }}<br>
-            <strong>Day Low</strong> {{ value.USD.LOWDAY }}<br>
-            <strong>Market Cap</strong> {{ value.USD.MKTCAP }}<br>
+                <div class="card text-center mb-5">
+                    <div class="card-header bg-warning"><h3>{{ key }}</h3></div>
+                    <div class="card-body">
+                        <strong>Price</strong> {{ value.USD.PRICE }}<br>
+                        <strong>Day High</strong> {{ value.USD.HIGHDAY }}<br>
+                        <strong>Day Low</strong> {{ value.USD.LOWDAY }}<br>
+                        <strong>Market Cap</strong> {{ value.USD.MKTCAP }}<br>
+                        <br>
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div id="tradingview_2af27"></div>
+                            <div class="tradingview-widget-copyright"><a href="https://uk.tradingview.com/symbols/{{ key }}USD/"
+                                                                         rel="noopener" target="_blank"><span class="blue-text">{{ key }}USD Chart</span></a>
+                                by TradingView
+                            </div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                                new TradingView.widget(
+                                    {
+                                        "width": 980,
+                                        "height": 610,
+                                        "symbol": "{{ key }}USD",
+                                        "interval": "D",
+                                        "timezone": "Etc/UTC",
+                                        "theme": "dark",
+                                        "style": "1",
+                                        "locale": "uk",
+                                        "toolbar_bg": "#f1f3f6",
+                                        "enable_publishing": false,
+                                        "hide_legend": true,
+                                        "hide_side_toolbar": false,
+                                        "allow_symbol_change": true,
+                                        "container_id": "tradingview_2af27"
+                                    }
+                                );
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                        <!-- TradingView Widget END -->
+            {% endfor %}
         </div>
-
-    </div>
-    {% endfor %}
-</div>
-{% endif %}
+    {% endif %}
 
 {% endblock %}
