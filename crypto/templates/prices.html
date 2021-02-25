@@ -9,7 +9,7 @@
         {% endif %}
         <div class="container">
             {% for key,value in crypto.DISPLAY.items %}
-
+                                                                  
                 <div class="card text-center mb-5">
                     <div class="card-header bg-warning"><h3>{{ key }}</h3></div>
                     <div class="card-body">
@@ -20,7 +20,7 @@
                         <br>
                         <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container">
-                            <div id="tradingview_2af27"></div>
+                            <div id="tradingview_2af27" style="height:35rem"></div>
                             <div class="tradingview-widget-copyright"><a href="https://uk.tradingview.com/symbols/{{ key }}USD/"
                                                                          rel="noopener" target="_blank"><span class="blue-text">{{ key }}USD Chart</span></a>
                                 by TradingView
@@ -29,8 +29,7 @@
                             <script type="text/javascript">
                                 new TradingView.widget(
                                     {
-                                        "width": 980,
-                                        "height": 610,
+                                        "autosize": true,
                                         "symbol": "{{ key }}USD",
                                         "interval": "D",
                                         "timezone": "Etc/UTC",
