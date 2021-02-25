@@ -143,7 +143,7 @@ tags
 .idea/
 
 .pytest_cache/
-!/db.sqlite3
+db.sqlite3
 
 .idea
 .secret.txt
