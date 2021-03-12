@@ -28,3 +28,9 @@ def prices(request):
     else:
         notfound = "Enter a crypto currency into the form above"
         return render(request, 'prices.html', {'notfound': notfound})
+
+
+def charts(request):
+    if request.method == 'GET':
+        quote = request.GET['quote']
+        return render(request, 'prices.html', {'quote': quote})
