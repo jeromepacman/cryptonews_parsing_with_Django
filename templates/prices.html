@@ -8,11 +8,6 @@
             <h3>Sorry, {{ quote }} doesn't exist. Please try again...</h3>
         {% endif %}
         <div class="container">
-
-            <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
-            <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="movers"
-                 lcw-marquee-2="movers" lcw-marquee-items="20"></div>
-
             {% for key,value in crypto.DISPLAY.items %}
 
                 <div class="card text-center mb-5">
