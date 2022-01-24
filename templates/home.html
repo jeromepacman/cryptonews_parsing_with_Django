@@ -6,31 +6,7 @@
     <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="none"
          lcw-marquee-2="movers" lcw-marquee-items="20"></div>
 
-
-    <table class="table table-striped table-bordered table-hover table-md">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Currency</th>
-            <th scope="col">Price</th>
-            <th scope="col">24h High</th>
-            <th scope="col">24h Low</th>
-            <th scope="col">Market Cap</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for key,value in price.DISPLAY.items %}
-            <tr>
-                <td>{{ key }}</td>
-                <td>{{ value.USD.PRICE }}</td>
-                <td>{{ value.USD.HIGHDAY }}</td>
-                <td>{{ value.USD.LOWDAY }}</td>
-                <td>{{ value.USD.MKTCAP }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <br><br>
+    <br>
 
     <div class="row">
         {% for x in api.Data %}
